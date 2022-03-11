@@ -40,7 +40,7 @@ app.post('/sign_up', function(req,res){
     }
     db.collection('student').insertOne(data,function(err, collection){
         if (err) throw err;
-        console.log("Record inserted Successfully");
+        console.log(`Record for "${data.fname} ${data.lname}" inserted Successfully`);
               
     });
     return res.redirect('/registered_success');
